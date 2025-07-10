@@ -59,5 +59,5 @@ Built as a passion project to combine **fitness**, **AI**, and **gamification** 
 ## 📬 Contact / Portfolio
 
 Made by **Adarshkrishnan P**  
-[GitHub](https://github.com/AdarshKrishnan007) • [LinkedIn](https://linkedin.com/in/yourname)  
+[GitHub](https://github.com/AdarshKrishnan007) • [LinkedIn](https://www.linkedin.com/in/adarshkrishnanp)  
 
