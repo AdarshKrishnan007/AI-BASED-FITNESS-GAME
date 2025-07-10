@@ -1,0 +1,107 @@
+.white-navbar {
+  position: absolute;
+  top: 30px; /* Adjust this based on how far you want it from top */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  width: calc(100% - 80px); /* leaves some margin on sides */
+  max-width: 1200px;
+  z-index: 1000;
+}
+
+.white-navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.white-navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #250062;
+}
+
+.white-navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.white-nav-link {
+  color: #250062;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+  padding: 0.3rem 0;
+}
+
+.white-nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #250062;
+  transition: width 0.3s ease;
+}
+
+.white-nav-link:hover::after,
+.white-nav-link.active::after {
+  width: 100%;
+}
+
+.logout-link {
+  cursor: pointer;
+  color: #730011;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #250062;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .white-navbar {
+    height: 80px;
+  }
+  .white-navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: beige;
+    border-radius: 10px;
+  }
+
+  .menu-icon {
+    display: block;
+    align-self: flex-end;
+    margin-top: -3rem;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  .white-navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .white-navbar-links.active {
+    display: flex;
+  }
+
+  .white-nav-link {
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+  }
+}

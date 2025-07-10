@@ -1,0 +1,104 @@
+.xp-card-row {
+  background: #023e32;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 0 1.5rem;
+  font-family: "Poppins", sans-serif;
+  color: rgb(234, 232, 255);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 9rem;
+  width: 103%;
+  max-width: 789px;
+  border: 2px solid #efeaea;
+}
+
+/* Left Section: Badge icon and its progress bar */
+.left-section1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 70px;
+  gap: 0;
+}
+
+/* Center Section: Badge title and level */
+.center-section {
+  text-align: center;
+  flex: 2 1;
+}
+
+/* Right Section: XP and XP bar */
+.right-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Badge styles */
+.badge-icon {
+  font-size: 1.5rem;
+}
+
+.badge-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Progress Bar Base */
+.progress-bar {
+  background-color: #efeaea;
+  height: 10px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.progress-bar.small {
+  height: 5px;
+  width: 130px;
+}
+
+/* Progress fill animation */
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #a5ff56, #3ef61e);
+  transition: width 0.5s ease;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .xp-card-row {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    gap: 0;
+    margin-top: 8rem;
+    width: 80%;
+    padding: 15px;
+  }
+
+  .left-section1,
+  .center-section,
+  .right-section {
+    flex: 1 1 100%;
+    align-items: center;
+  }
+
+  .progress-bar.small {
+    max-width: 100%;
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .badge-title {
+    font-size: 1.1rem;
+  }
+
+  .badge-icon {
+    font-size: 1.6rem;
+  }
+}

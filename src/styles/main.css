@@ -1,0 +1,130 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  height: max-content;
+  font-family: "Poppins", sans-serif;
+  /* overflow: hidden; */
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to bottom right, #0f172a, #1e3a8a);
+  background-image: url("../assets/images/gym5.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #f8fafc;
+  min-height: 100vh;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.81) 10%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Layout wrapper */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+
+  box-sizing: border-box;
+}
+
+/* Page container */
+.page {
+  margin-top: 50px;
+  width: 90%;
+  background: #ffffffdd; /* semi-transparent white */
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 2.5rem 3rem;
+  margin-bottom: 3rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.page:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Headings */
+h1,
+h2,
+h3 {
+  color: #2d3436;
+  margin-bottom: 1.25rem;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.8rem;
+  letter-spacing: 0.05em;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+/* Buttons */
+button {
+  background-color: #00b894;
+  color: white;
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 6px 15px rgba(0, 184, 148, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+button:hover {
+  background-color: #019875;
+  box-shadow: 0 8px 20px rgba(1, 152, 117, 0.6);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Utility spacing */
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .page {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  button {
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+}
